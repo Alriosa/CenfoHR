@@ -30,8 +30,9 @@
             <JFXTextField id="campoDeTexto" layoutX="260.0" layoutY="254.0" promptText="Segundo Apellido" stylesheets="@personalStyle.css" />
             <JFXTextField id="campoDeTexto" layoutX="723.0" layoutY="178.0" promptText="Primer Apellido" stylesheets="@personalStyle.css" />
             <JFXTextField id="campoDeTexto" layoutX="260.0" layoutY="427.0" promptText="Contraseña" stylesheets="@personalStyle.css" />
+            <JFXComboBox layoutX="723.0" layoutY="468.0" prefHeight="25.0" prefWidth="135.0" promptText="Roles" />
+            <JFXDatePicker layoutX="723.0" layoutY="358.0" prefHeight="28.0" prefWidth="328.0" promptText="Fecha de Ingreso" />
       </children>
     </AnchorPane>
-      <JFXTextField promptText="Segundo Apellido" />
   </children>
 </VBox>
