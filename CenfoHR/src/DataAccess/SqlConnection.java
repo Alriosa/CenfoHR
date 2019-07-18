@@ -1,45 +1,63 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package DataAccess;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+//=====================================================================
+//
+//  File:    connectURL.java      
+//  Summary: This Microsoft JDBC Driver for SQL Server sample application
+//	     demonstrates how to connect to a SQL Server database by using
+//	     a connection URL. It also demonstrates how to retrieve data 
+//	     from a SQL Server database by using an SQL statement.
+//
+//---------------------------------------------------------------------
+//
+//  This file is part of the Microsoft JDBC Driver for SQL Server Code Samples.
+//  Copyright (C) Microsoft Corporation.  All rights reserved.
+//
+//  This source code is intended only as a supplement to Microsoft
+//  Development Tools and/or on-line documentation.  See these other
+//  materials for detailed information regarding Microsoft code samples.
+//
+//  THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF 
+//  ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO 
+//  THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+//  PARTICULAR PURPOSE.
+//
+//===================================================================== 
 
-/**
- *
- * @author Alriosa
- */
+import java.sql.*;
+
 public class SqlConnection {
-  public void dbConnect(String db_connect_string,
-            String db_userid,
-            String db_password)
-   {
-      try {
-         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-         Connection conn = DriverManager.getConnection(db_connect_string,
-                  db_userid, db_password);
-         System.out.println("connected");
-         Statement statement = conn.createStatement();
-         String queryString = "select * from sysobjects where type='u'";
-         ResultSet rs = statement.executeQuery(queryString);
-         while (rs.next()) {
-            System.out.println(rs.getString(1));
-         }
-      } catch (Exception e) {
-          System.out.println("No conecto");
-         e.printStackTrace();
-      }
-   }
 
-   public static void main(String[] args)
-   {
-      SqlConnection connServer = new SqlConnection();
-      connServer.dbConnect("jdbc:sqlserver://<DESKTOP-VTDKB1C>", "<user>",
-               "<password>");
-   }
+	public static void main(String[] args) {
+		
+		// Create a variable for the connection string.
+		String connectionUrl = "jdbc:sqlserver://localhost:1433;" +
+			"databaseName=BANKMVC;integratedSecurity=true;";
+
+		// Declare the JDBC objects.
+		Connection con = null;
+		Statement stmt = null;
+		ResultSet rs = null;
+		
+        	try {
+        		// Establish the connection.
+        		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            		con = DriverManager.getConnection(connectionUrl);
+            
+        	}
+        
+		// Handle any errors that may have occurred.
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		finally {
+                    
+                    System.out.println("CONNECTED");
+			if (rs != null) try { rs.close(); } catch(Exception e) {}
+	    		if (stmt != null) try { stmt.close(); } catch(Exception e) {}
+	    		if (con != null) try { con.close(); } catch(Exception e) {}
+		}
+	}
 }
+

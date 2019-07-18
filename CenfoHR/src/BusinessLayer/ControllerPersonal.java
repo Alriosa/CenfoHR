@@ -9,6 +9,6 @@ package BusinessLayer;
  *
  * @author Alriosa
  */
-public class PersonalLogica {
+public class ControllerPersonal {
     
 }
