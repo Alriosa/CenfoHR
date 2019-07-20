@@ -13,7 +13,7 @@
   <children>
     <AnchorPane id="personalPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="498.0" prefWidth="496.0" stylesheets="@personalStyle.css" VBox.vgrow="ALWAYS">
       <children>
-            <AnchorPane id="personalInternalPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="1366.0">
+            <AnchorPane id="personalInternalPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="1366.0" stylesheets="@../Resources/personalStyle.css">
                <children>
               <Label id="fontRegistro" alignment="CENTER" layoutX="495.0" layoutY="35.0" style="&#10;" stylesheets="@personalStyle.css" text="REGISTRO DE PERSONAL" textAlignment="CENTER" textFill="#8a2f2f">
                 <font>
@@ -22,16 +22,20 @@
               </Label>
                </children>
             </AnchorPane>
-            <JFXComboBox layoutX="260.0" layoutY="359.0" prefHeight="25.0" prefWidth="135.0" promptText="Genero" />
-            <JFXTextField id="campoDeTexto" layoutX="260.0" layoutY="178.0" promptText="Nombre" stylesheets="@personalStyle.css" />
-            <JFXDatePicker layoutX="723.0" layoutY="281.0" prefHeight="28.0" prefWidth="328.0" promptText="Fecha de Nacimiento" />
-            <JFXButton id="botones" layoutX="683.0" layoutY="636.0" stylesheets="@personalStyle.css" text="ACEPTAR" />
-            <JFXButton id="botones" layoutX="492.0" layoutY="636.0" stylesheets="@personalStyle.css" text="CANCELAR" />
-            <JFXTextField id="campoDeTexto" layoutX="260.0" layoutY="254.0" promptText="Segundo Apellido" stylesheets="@personalStyle.css" />
-            <JFXTextField id="campoDeTexto" layoutX="723.0" layoutY="178.0" promptText="Primer Apellido" stylesheets="@personalStyle.css" />
-            <JFXTextField id="campoDeTexto" layoutX="260.0" layoutY="427.0" promptText="Contraseña" stylesheets="@personalStyle.css" />
-            <JFXComboBox layoutX="723.0" layoutY="468.0" prefHeight="25.0" prefWidth="135.0" promptText="Roles" />
-            <JFXDatePicker layoutX="723.0" layoutY="358.0" prefHeight="28.0" prefWidth="328.0" promptText="Fecha de Ingreso" />
+            <JFXComboBox layoutX="260.0" layoutY="281.0" prefHeight="25.0" prefWidth="291.0" promptText="Genero" />
+            <JFXTextField id="campoDeTexto" layoutX="260.0" layoutY="178.0" prefWidth="291.0" promptText="Nombre" stylesheets="@personalStyle.css" />
+            <JFXDatePicker layoutX="723.0" layoutY="225.0" prefHeight="28.0" prefWidth="328.0" promptText="Fecha de Nacimiento" stylesheets="@../Resources/personalStyle.css" />
+            <JFXButton id="botones" layoutX="683.0" layoutY="636.0" stylesheets="@../Resources/personalStyle.css" text="ACEPTAR" />
+            <JFXButton id="botones" layoutX="492.0" layoutY="636.0" stylesheets="@../Resources/personalStyle.css" text="CANCELAR" />
+            <JFXTextField id="campoDeTexto" layoutX="260.0" layoutY="228.0" prefWidth="291.0" promptText="Segundo Apellido" stylesheets="@personalStyle.css" />
+            <JFXTextField id="campoDeTexto" layoutX="723.0" layoutY="178.0" prefHeight="25.0" prefWidth="291.0" promptText="Primer Apellido" stylesheets="@personalStyle.css" />
+            <JFXTextField id="campoDeTexto" layoutX="260.0" layoutY="342.0" prefWidth="291.0" promptText="Contraseña" stylesheets="@personalStyle.css" />
+            <JFXComboBox layoutX="723.0" layoutY="425.0" prefHeight="25.0" prefWidth="291.0" promptText="Roles" />
+            <JFXDatePicker layoutX="723.0" layoutY="278.0" prefHeight="28.0" prefWidth="328.0" promptText="Fecha de Ingreso" />
+            <JFXButton id="botonesArchivos" layoutX="260.0" layoutY="421.0" stylesheets="@../Resources/personalStyle.css" text="SELECCIONAR ARCHIVOS" />
+            <JFXButton id="botonesArchivos" layoutX="723.0" layoutY="362.0" stylesheets="@../Resources/personalStyle.css" text="SELECCIONAR ARCHIVOS" />
+            <Label layoutX="260.0" layoutY="395.0" text="Fotografia" />
+            <Label layoutX="723.0" layoutY="339.0" text="Grados Academicos" />
       </children>
     </AnchorPane>
   </children>
