@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="736.0" prefWidth="383.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane id="personalPane" maxHeight="-1.0" maxWidth="-1.0" minWidth="500.0" prefHeight="713.0" prefWidth="731.0" stylesheets="@personalStyle.css" VBox.vgrow="ALWAYS">
+         <children>
+            <AnchorPane id="personalInternalPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="500.0" stylesheets="@../Resources/personalStyle.css">
+               <children>
+                  <Label id="fontRegistro" alignment="CENTER" layoutX="175.0" stylesheets="@personalStyle.css" text="CENFOHR" textFill="#8a2f2f">
+                     <font>
+                        <Font name="System Bold Italic" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label id="fontRegistro" alignment="CENTER" layoutX="168.0" layoutY="50.0" stylesheets="@personalStyle.css" text="PERSONAL" textFill="#8a2f2f">
+                     <font>
+                        <Font name="System Bold Italic" size="11.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <JFXButton id="botones" layoutX="50.0" layoutY="166.0" prefHeight="120.0" prefWidth="368.0" stylesheets="@../Resources/personalStyle.css" text="CREAR PERSONAL" />
+            <JFXButton id="botones" layoutX="50.0" layoutY="292.0" prefHeight="120.0" prefWidth="368.0" stylesheets="@../Resources/personalStyle.css" text="MANTENIMIENTO PERSONAL" />
+            <JFXButton id="botones" layoutX="50.0" layoutY="419.0" prefHeight="120.0" prefWidth="368.0" stylesheets="@../Resources/personalStyle.css" text="ATRAS" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
