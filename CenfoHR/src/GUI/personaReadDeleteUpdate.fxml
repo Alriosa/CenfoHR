@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -10,16 +12,30 @@
    <children>
       <AnchorPane id="personalPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="498.0" prefWidth="496.0" stylesheets="@personalStyle.css" VBox.vgrow="ALWAYS">
          <children>
-            <AnchorPane id="personalInternalPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="1366.0">
+            <AnchorPane id="personalInternalPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="1366.0" stylesheets="@../Resources/personalStyle.css">
                <children>
-                  <Label id="fontRegistro" alignment="CENTER" layoutX="495.0" layoutY="35.0" style="&#10;" stylesheets="@personalStyle.css" text="REGISTRO DE PERSONAL" textAlignment="CENTER" textFill="#8a2f2f">
+                  <Label id="fontRegistro" alignment="CENTER" layoutX="435.0" layoutY="35.0" stylesheets="@personalStyle.css" text="MANTENIMIENTO DE PERSONAL" textAlignment="CENTER" textFill="#8a2f2f">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="System Bold Italic" size="11.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <JFXTextArea layoutX="89.0" layoutY="203.0" prefHeight="35.0" prefWidth="233.0" />
+            <JFXButton id="botones" layoutX="796.0" layoutY="636.0" stylesheets="@../Resources/personalStyle.css" text="BORRAR" />
+            <JFXButton id="botones" layoutX="500.0" layoutY="636.0" stylesheets="@../Resources/personalStyle.css" text="ATRAS" />
+            <TableView layoutX="78.0" layoutY="157.0" prefHeight="444.0" prefWidth="1210.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Nombre" />
+                <TableColumn prefWidth="125.0" text="Primer Apellido" />
+                  <TableColumn prefWidth="120.0" text="Segundo Apellido" />
+                  <TableColumn minWidth="0.0" prefWidth="169.0" text="Fecha de nacimiento" />
+                  <TableColumn prefWidth="154.0" text="Fecha de ingreso" />
+                  <TableColumn prefWidth="134.0" text="Genero" />
+                  <TableColumn prefWidth="149.0" text="Roles" />
+                  <TableColumn prefWidth="148.0" text="Grados academicos" />
+                  <TableColumn minWidth="0.0" prefWidth="135.0" text="Fotografia" />
+              </columns>
+            </TableView>
          </children>
       </AnchorPane>
    </children>
