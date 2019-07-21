@@ -15,9 +15,9 @@
       <children>
             <AnchorPane id="personalInternalPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="1366.0" stylesheets="@../Resources/personalStyle.css">
                <children>
-              <Label id="fontRegistro" alignment="CENTER" layoutX="495.0" layoutY="35.0" style="&#10;" stylesheets="@personalStyle.css" text="REGISTRO DE PERSONAL" textAlignment="CENTER" textFill="#8a2f2f">
+              <Label id="fontRegistro" alignment="CENTER" layoutX="495.0" layoutY="35.0" stylesheets="@personalStyle.css" text="REGISTRO DE PERSONAL" textAlignment="CENTER" textFill="#8a2f2f">
                 <font>
-                  <Font size="18.0" />
+                  <Font name="System Bold Italic" size="11.0" />
                 </font>
               </Label>
                </children>

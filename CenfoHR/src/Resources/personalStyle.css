@@ -1,16 +1,18 @@
 @font-face {
     font-family: Roboto-Regular;
-    src: url(..Resources/font/Roboto-Regular.ttf);
+    src: url(Roboto-Regular.ttf);
   }
-
+  /*..\Resources\font\Roboto-Medium.ttf"*/
   @font-face {
     font-family: Roboto-Medium;
-    src: url(..Resources/font/Roboto-Medium.ttf);
+    src: url(Roboto-Medium.ttf);
   }
+
+  
 
   @font-face {
     font-family: Roboto-Thin;
-    src: url(..Resources/font/Roboto-Thin.ttf);
+    src: url(Roboto-Thin.ttf);
   }
 
 
@@ -25,13 +27,13 @@
 #fontRegistro{
     -fx-text-fill:white;
     -fx-font-size: 34px;
-    /*-fx-font-family: 'Roboto-Regular';*/
+    -fx-font-family: 'Roboto-Medium';
 }
 
 #campoDeTexto{
     -fx-pref-width	: 328px;
     -fx-pref-height :53px;
-    
+  
 }
 
 #botones{
