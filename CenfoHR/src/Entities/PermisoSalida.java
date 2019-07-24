@@ -13,39 +13,46 @@ import java.util.Date;
  */
 public class PermisoSalida extends Notificacion{
    private boolean estado;
-   private Date fechaFin;
+   private Date fechaentrada;
+   private Date fechasalida;
    private String descripcion;
    private int id;
    private final String tipoNotificacion="Salida";
-   
-    public PermisoSalida(boolean estado, Date fechaFin, String descripcion, int id) {
-        this.estado = estado;
-        this.fechaFin = fechaFin;
-        this.descripcion = descripcion;
-        this.id = id;
+
+    
+
+    public PermisoSalida() {
     }
+
+ 
+    public Date getFechaentrada() {
+        return fechaentrada;
+    }
+
+    public void setFechaentrada(Date fechaentrada) {
+        this.fechaentrada = fechaentrada;
+    }
+
+    public Date getFechasalida() {
+        return fechasalida;
+    }
+
+    public void setFechasalida(Date fechasalida) {
+        this.fechasalida = fechasalida;
+    }
+   
 
     public String getTipoNotificacion() {
         return tipoNotificacion;
     }
 
-    public PermisoSalida() {
-    }
-
+  
     public boolean isEstado() {
         return estado;
     }
 
     public void setEstado(boolean estado) {
         this.estado = estado;
-    }
-
-    public Date getFechaFin() {
-        return fechaFin;
-    }
-
-    public void setFechaFin(Date fechaFin) {
-        this.fechaFin = fechaFin;
     }
 
     public String getDescripcion() {
