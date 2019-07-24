@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXTextArea?>
 <?import com.jfoenix.controls.JFXTextField?>
@@ -24,11 +25,12 @@
             </AnchorPane>
             <JFXTextField id="campoDeTexto" layoutX="260.0" layoutY="178.0" promptText="Nombre" styleClass="campoDeTexto" />
             <JFXDatePicker layoutX="256.0" layoutY="282.0" prefHeight="28.0" prefWidth="328.0" promptText="Fecha de inicio" styleClass="campoDeTexto" />
-            <JFXButton layoutX="752.0" layoutY="552.0" styleClass="botones" text="CREAR" />
-            <JFXButton id="botones" layoutX="478.0" layoutY="549.0" prefHeight="68.0" prefWidth="127.0" styleClass="botones" text="CANCELAR" />
+            <JFXButton layoutX="792.0" layoutY="615.0" styleClass="botones" text="MODIFICAR" />
+            <JFXButton id="botones" layoutX="472.0" layoutY="615.0" prefHeight="68.0" prefWidth="127.0" styleClass="botones" text="CANCELAR" />
             <JFXTextField layoutX="723.0" layoutY="178.0" promptText="Código" styleClass="campoDeTexto" />
             <JFXDatePicker layoutX="724.0" layoutY="278.0" prefHeight="28.0" prefWidth="328.0" promptText="Fecha de fin" styleClass="campoDeTexto" />
-            <JFXTextArea layoutX="256.0" layoutY="393.0" prefHeight="90.0" prefWidth="792.0" promptText="Descripción de proyecto" />
+            <JFXTextArea layoutX="256.0" layoutY="368.0" prefHeight="204.0" prefWidth="328.0" promptText="Descripción de proyecto" />
+            <JFXComboBox layoutX="724.0" layoutY="358.0" prefHeight="6.0" prefWidth="328.0" promptText="Estado" styleClass="campoDeTexto" />
       </children>
     </AnchorPane>
   </children>

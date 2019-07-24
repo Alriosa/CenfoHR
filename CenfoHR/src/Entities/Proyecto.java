@@ -17,12 +17,12 @@ public class Proyecto {
     private Date fechaInicio;
     private Date fechaFin;
     private String descripcion;
-    private int estado;
+    private Estado estado;
 
     public Proyecto() {
     }
 
-    public Proyecto(String nombre, int codigo, Date fechaInicio, Date fechaFin, String descripcion, int estado) {
+    public Proyecto(String nombre, int codigo, Date fechaInicio, Date fechaFin, String descripcion, Estado estado) {
         this.nombre = nombre;
         this.codigo = codigo;
         this.fechaInicio = fechaInicio;
@@ -51,7 +51,7 @@ public class Proyecto {
         return descripcion;
     }
 
-    public int getEstado() {
+    public Estado getEstado() {
         return estado;
     }
 
@@ -75,7 +75,7 @@ public class Proyecto {
         this.descripcion = descripcion;
     }
 
-    public void setEstado(int estado) {
+    public void setEstado(Estado estado) {
         this.estado = estado;
     }
     
