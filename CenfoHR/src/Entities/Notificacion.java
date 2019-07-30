@@ -17,7 +17,7 @@ public class Notificacion {
     private String asunto;
     private Boolean estado;
     private String remitente;
-
+   
     public Notificacion() {
     }
 
