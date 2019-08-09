@@ -15,10 +15,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
@@ -26,7 +28,7 @@ import javafx.stage.Stage;
  * @author Usuario
  */
 public class MenuController implements Initializable {
-
+   
     @FXML
     private AnchorPane panelPaCambiar;
     @FXML
@@ -37,27 +39,51 @@ public class MenuController implements Initializable {
     private Button btnPerfil;
 
     @FXML
-    private Button btnCerrarSesion;
+    private Button btnCerrarSesion; 
+    @FXML
+    private AnchorPane panelMenuSuperior;
+    @FXML
+    private Button btnProyecto;
 
     @FXML
-    void panelBandeja(ActionEvent event) {
+    private Button btnPersonal;
+    @FXML
+    private VBox panelMenuEmpleado;
+
+    @FXML
+    private AnchorPane panelMenuEmpleado1;
+    @FXML
+    void panelPerfil(ActionEvent event) {
 
     }
 
     @FXML
-    void panelInicioSesion(ActionEvent event) {
+    void panelPersonal(ActionEvent event) {
 
+    }
+
+    @FXML
+    void panelProyecto(ActionEvent event) {
+
+    }
+
+    
+    @FXML
+    void panelBandeja(ActionEvent event) throws IOException {
+        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("/GUI/notificaciones.fxml"));
+        panelPaCambiar.getChildren().setAll(pane1);
+    }
+
+    @FXML
+    void panelInicioSesion(ActionEvent event) throws IOException {
+        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("/Resources/InicioSesion.fxml"));
+        panelMenuEmpleado1.getChildren().setAll(pane1);
     }
 
     @FXML
     public void panelMensajes(ActionEvent event) throws IOException {
         AnchorPane pane2 = FXMLLoader.load(getClass().getResource("/Resources/NotificacionesOpcion.fxml"));
-    panelPaCambiar.getChildren().setAll(pane2);
-    }
-
-    @FXML
-    void panelPerfil(ActionEvent event) {
-
+        panelPaCambiar.getChildren().setAll(pane2);
     }
 
     @Override
