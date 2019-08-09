@@ -5,10 +5,39 @@
  */
 package BusinessLayer;
 
+import DataAccess.PersonalMapper;
+import DataAccess.leaf;
+import Entities.Personal;
+import java.util.ArrayList;
+
 /**
  *
  * @author Alriosa
  */
-public class PersonalLogica {
+public class PersonalLogica implements leaf{
+    ArrayList<Personal> lstPersonal=new ArrayList<>();
+    private PersonalMapper miPersona= new PersonalMapper();
+    public PersonalLogica() {
+    }
+    @Override
+    public Object crearObjeto(Object miObjeto) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Object buscarObjeto(Object miObjeto) {
+        return miPersona.buscarPersona(miObjeto);
+    }
+
+    @Override
+    public ArrayList<Object> listarObjeto() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String eliminarObjeto(Object miOnjeto) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
     
 }

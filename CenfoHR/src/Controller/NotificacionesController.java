@@ -73,13 +73,13 @@ public class NotificacionesController implements Initializable{
 
     @FXML
     private void permisoSalida(ActionEvent event) throws IOException {
-        AnchorPane pane2 = FXMLLoader.load(getClass().getResource("/Resources/PermisoSalida.fxml"));
+    AnchorPane pane2 = FXMLLoader.load(getClass().getResource("/Resources/PermisoSalida.fxml"));
     pnlNotificaciones.getChildren().setAll(pane2);
     }
    
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        panelBandeja();
+     //   panelBandeja();
     }
     
 

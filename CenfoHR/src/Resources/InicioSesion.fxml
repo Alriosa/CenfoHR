@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.InicioSesionController">
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PersonaController">
    <children>
       <AnchorPane id="InicioSesionPanel" fx:id="pnlInicioSesion" maxHeight="-1.0" maxWidth="-1.0" prefHeight="700.0" prefWidth="1366.0" stylesheets="@personalStyle.css">
       <children>

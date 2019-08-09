@@ -37,21 +37,17 @@ public class MenuController implements Initializable {
     private Button btnMensajes;
     @FXML
     private Button btnPerfil;
-
     @FXML
     private Button btnCerrarSesion; 
     @FXML
     private AnchorPane panelMenuSuperior;
     @FXML
     private Button btnProyecto;
-
     @FXML
     private Button btnPersonal;
     @FXML
-    private VBox panelMenuEmpleado;
-
-    @FXML
     private AnchorPane panelMenuEmpleado1;
+    
     @FXML
     void panelPerfil(ActionEvent event) {
 
@@ -75,17 +71,18 @@ public class MenuController implements Initializable {
     }
 
     @FXML
-    void panelInicioSesion(ActionEvent event) throws IOException {
-        AnchorPane pane1 = FXMLLoader.load(getClass().getResource("/Resources/InicioSesion.fxml"));
-        panelMenuEmpleado1.getChildren().setAll(pane1);
-    }
-
-    @FXML
     public void panelMensajes(ActionEvent event) throws IOException {
         AnchorPane pane2 = FXMLLoader.load(getClass().getResource("/Resources/NotificacionesOpcion.fxml"));
         panelPaCambiar.getChildren().setAll(pane2);
     }
 
+    @FXML
+    void panelInicioSesion(ActionEvent event) throws IOException {
+        AnchorPane pane3 = FXMLLoader.load(getClass().getResource("/Resources/InicioSesion.fxml"));
+        panelMenuEmpleado1.getChildren().setAll(pane3);
+    }
+    
+    
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //TODO

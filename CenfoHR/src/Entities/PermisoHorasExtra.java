@@ -5,13 +5,14 @@
  */
 package Entities;
 
+import BusinessLayer.NotificacionesEnviar;
 import java.util.Date;
 
 /**
  *
  * @author Usuario
  */
-public class PermisoHorasExtra extends Notificacion{
+public class PermisoHorasExtra  {
     private int horasExtra;
     private boolean estado;
     private int id;
@@ -24,7 +25,6 @@ public class PermisoHorasExtra extends Notificacion{
     }
 
     public PermisoHorasExtra(Date fechaNotificacion, String asunto, String remitente, int horasExtra) {
-        super(fechaNotificacion, asunto, true, remitente);
         this.horasExtra = horasExtra;
         this.estado = false;
 
@@ -58,6 +58,8 @@ public class PermisoHorasExtra extends Notificacion{
     public void setId(int id) {
         this.id = id;
     }
+
+    
     
     
 }

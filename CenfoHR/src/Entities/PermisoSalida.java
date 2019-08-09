@@ -5,26 +5,43 @@
  */
 package Entities;
 
+
 import java.util.Date;
 
 /**
  *
  * @author Usuario
  */
-public class PermisoSalida extends Notificacion{
-   private boolean estado;
-   private Date fechaentrada;
-   private Date fechasalida;
-   private String descripcion;
-   private int id;
-   private final String tipoNotificacion="Salida";
+public class PermisoSalida {
 
-    
+    private boolean estado;
+    private Date fechaentrada;
+    private Date fechasalida;
+    private String descripcion;
+    private int id;
+    private String tipoNotificacion;
+    private int idNotificacion;
 
     public PermisoSalida() {
     }
 
- 
+    public PermisoSalida(Date fechaentrada, Date fechasalida, String descripcion, String tipoNotificacion, int idNotificacion) {
+        this.estado = false;
+        this.fechaentrada = fechaentrada;
+        this.fechasalida = fechasalida;
+        this.descripcion = descripcion;
+        this.tipoNotificacion = tipoNotificacion;
+        this.idNotificacion = idNotificacion;
+    }
+
+    public int getIdNotificacion() {
+        return idNotificacion;
+    }
+
+    public void setIdNotificacion(int idNotificacion) {
+        this.idNotificacion = idNotificacion;
+    }
+
     public Date getFechaentrada() {
         return fechaentrada;
     }
@@ -40,13 +57,11 @@ public class PermisoSalida extends Notificacion{
     public void setFechasalida(Date fechasalida) {
         this.fechasalida = fechasalida;
     }
-   
 
     public String getTipoNotificacion() {
         return tipoNotificacion;
     }
 
-  
     public boolean isEstado() {
         return estado;
     }
@@ -70,6 +85,7 @@ public class PermisoSalida extends Notificacion{
     public void setId(int id) {
         this.id = id;
     }
-   
-   
+
+    
+
 }
