@@ -1,4 +1,4 @@
-#personalPane{
+#personalPane,#menuPane{
     -fx-background-color: #FFFFFF;
 }
 
@@ -12,7 +12,7 @@
 }
 
 #campoDeTexto{
-    -fx-pref-width	: 328px;
+    -fx-pref-width: 328px;
     -fx-pref-height :53px;
 }
 
@@ -25,7 +25,7 @@
 
 #botonesArchivos{
     -fx-background-color: #009688;
-    -fx-pref-width	: 216px;
+    -fx-pref-width: 216px;
     -fx-pref-height :33px;
     -fx-text-fill:white;
 }

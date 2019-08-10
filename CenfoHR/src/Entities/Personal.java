@@ -12,6 +12,8 @@ import java.util.Date;
  * @author Alriosa
  */
 public class Personal {
+
+    String identificacion;
     String nombre;
     String apellidoUno;
     String apellidoDos;
@@ -19,11 +21,13 @@ public class Personal {
     Date fechaIngreso;
     String genero;
     String contrasenna;
+    int rol;
 
     public Personal() {
     }
 
-    public Personal(String nombre, String apellidoUno, String apellidoDos, Date fechaNacimiento, Date fechaIngreso, String genero, String contrasenna) {
+    public Personal(String identificacion, String nombre, String apellidoUno, String apellidoDos, Date fechaNacimiento, Date fechaIngreso, String genero, String contrasenna, int rol) {
+        this.identificacion = identificacion;
         this.nombre = nombre;
         this.apellidoUno = apellidoUno;
         this.apellidoDos = apellidoDos;
@@ -31,6 +35,25 @@ public class Personal {
         this.fechaIngreso = fechaIngreso;
         this.genero = genero;
         this.contrasenna = contrasenna;
+        this.rol = rol;
+    }
+
+    
+    
+    public int getRol() {
+        return rol;
+    }
+
+    public void setRol(int rol) {
+        this.rol = rol;
+    }
+   
+    public String getIdentificacion() {
+        return identificacion;
+    }
+
+    public void setIdentificacion(String identificacion) {
+        this.identificacion = identificacion;
     }
 
     public String getNombre() {
@@ -93,5 +116,5 @@ public class Personal {
     public String toString() {
         return "Personal{" + "nombre=" + nombre + ", apellidoUno=" + apellidoUno + ", apellidoDos=" + apellidoDos + ", fechaNacimiento=" + fechaNacimiento + ", fechaIngreso=" + fechaIngreso + ", genero=" + genero + ", contrasenna=" + contrasenna + '}';
     }
-    
+
 }
