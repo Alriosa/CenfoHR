@@ -6,28 +6,51 @@
 package DataAccess;
 
 import Entities.PermisoSalida;
-import com.proyecto.conexion.Conector;
+import java.sql.DriverManager;
 
 /**
  *
  * @author Usuario
  */
-public class PermisoSalidaMapper {
-     public String crearNotificaciones(PermisoSalida miNotificacion) {
+public class PermisoSalidaMapper extends SqlConnection {
 
-        String consulta = "{Call dbo.crear_notificacion_permiso ('" + miNotificacion.getFechaentrada() + "','" 
-                + miNotificacion.getFechasalida() + "','" + miNotificacion.getDescripcion() + "','" 
-                + miNotificacion.getTipoNotificacion() + "','"+miNotificacion.getIdNotificacion()+"')}";
-          String resultado;
+    public String crearNotificaciones(PermisoSalida miNotificacion) {
+        java.sql.Date fechaEntrada = new java.sql.Date(miNotificacion.getFechaentrada().getTime());
+        java.sql.Date fechaSalida = new java.sql.Date(miNotificacion.getFechasalida().getTime());
+        String consulta = "{Call dbo.crear_notificacion_permiso ('" + fechaEntrada + "','"
+                + fechaSalida + "','" + miNotificacion.getDescripcion() + "','"
+                + miNotificacion.getTipoNotificacion() + "','" + miNotificacion.getIdNotificacion() + "')}";
+        String resultado;
 
         try {
-                Conector.getConector().ejecutarSQL(consulta);
-                resultado = "La notificacion se registró correctamente en el sistema.";
+            conn = DriverManager.getConnection(connectionUrl);
+            stmt = conn.createStatement();
+            stmt.execute(consulta);
+            resultado = "La notificacion se ha enviado correctamente en el sistema.";
 
         } catch (Exception error) {
-                resultado = "No se pudo registrar la notificacion, intentelo de nuevo " + error.getMessage();
+            resultado = "No se pudo enviar la notificacion, intentelo de nuevo " + error.getMessage();
 
-        }
+        } finally {
+
+            if (cst != null) {
+                try {
+                    cst.close();
+                } catch (Exception e) {
+                }
+            }
+            if (stmt != null) {
+                try {
+                    stmt.close();
+                } catch (Exception e) {
+                }
+            }
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (Exception e) {
+                }
+            }}
 
         return resultado;
     }

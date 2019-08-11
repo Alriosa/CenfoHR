@@ -5,6 +5,7 @@
  */
 package Entities;
 
+import BusinessLayer.NotificacionesEnviar;
 import java.util.Date;
 
 /**
@@ -12,19 +13,20 @@ import java.util.Date;
  * @author franciscosandoval
  */
 public class Notificacion {
-    
+    private int id;
     private Date fechaNotificacion;
     private String asunto;
-    private Boolean estado;
+    private String estado;
     private String remitente;
 
+   
     public Notificacion() {
     }
 
-    public Notificacion(Date fechaNotificacion, String asunto, Boolean estado, String remitente) {
-        this.fechaNotificacion = fechaNotificacion;
+    public Notificacion(String asunto,String remitente) {
+        this.fechaNotificacion = new Date();
         this.asunto = asunto;
-        this.estado = estado;
+        this.estado = "False";
         this.remitente = remitente;
     }
 
@@ -44,12 +46,16 @@ public class Notificacion {
         this.asunto = asunto;
     }
 
-    public Boolean getEstado() {
+    public String getEstado() {
         return estado;
     }
 
     public void setEstado(Boolean estado) {
-        this.estado = estado;
+        
+        if(estado){
+         this.estado = "Visto";
+        }else{ this.estado = "No visto";}
+        
     }
 
     public String getRemitente() {
@@ -60,6 +66,14 @@ public class Notificacion {
         this.remitente = remitente;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     @Override
     public String toString() {
         return "Notificacion{" + "fechaNotificacion=" + fechaNotificacion + ", asunto=" + asunto + ", estado=" + estado + ", remitente=" + remitente + '}';

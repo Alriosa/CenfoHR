@@ -4,11 +4,18 @@
  * and open the template in the editor.
  */
 package DataAccess;
-
+import java.sql.*;
 /**
  *
  * @author Alriosa
  */
 public class SqlConnection {
+    String connectionUrl = "jdbc:sqlserver://SHANNON1720;DatabaseName=DB_CENFO_HR;integratedsecurity = true";
     
+    protected Connection conn = null;
+    protected Statement stmt = null;
+    protected ResultSet rs = null;
+    protected CallableStatement cst =null;
+     
+     
 }
